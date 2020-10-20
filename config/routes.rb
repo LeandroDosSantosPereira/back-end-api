@@ -6,6 +6,9 @@ Rails.application.routes.draw do
      resources :users
      post 'users/login'
      post 'users/create'
+    #  Rotas do post
+    post "/posts", to: 'posts#create'
+    get "/posts", to: "posts#index"
     end
   end
 end
