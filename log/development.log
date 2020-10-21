@@ -25757,3 +25757,2224 @@ Processing by RailsAdmin::MainController#edit as HTML
 Completed 200 OK in 43ms (Views: 22.4ms | ActiveRecord: 16.9ms | Allocations: 8039)
 
 
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:04:21 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.62ms)
+Completed 200 OK in 52ms (Views: 21.5ms | ActiveRecord: 1.2ms | Allocations: 15244)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:06:50 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.29ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 1016)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:07:15 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.25ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:07:22 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :featured_image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (12.6ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$F7Pr9qGCvnhozqVsPQpOUu0glmMBUoPJU18CAQWawzc97BbECHgu2"], ["updated_at", "2020-10-21 13:07:22.725405"], ["id", 1]]
+  [1m[35m (75.7ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.35ms)
+Completed 200 OK in 171ms (Views: 1.1ms | ActiveRecord: 88.9ms | Allocations: 3721)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:12:37 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :featured_image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$CG7rHUhFq1GR6WDjhPO9oenf8jPzPjhf7X6EDCyN8ZYz9BBcxzUIa"], ["updated_at", "2020-10-21 13:12:37.557265"], ["id", 1]]
+  [1m[35m (63.4ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.24ms)
+Completed 200 OK in 145ms (Views: 0.7ms | ActiveRecord: 64.7ms | Allocations: 2485)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:13:40 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.34ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:14:00 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :featured_image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$ig281iKwpqroxdNIMFoPiuHzma9NJYN4/WBTCxkDkuOlP0z/I1sQe"], ["updated_at", "2020-10-21 13:14:00.899216"], ["id", 1]]
+  [1m[35m (67.1ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.31ms)
+Completed 200 OK in 151ms (Views: 2.0ms | ActiveRecord: 67.8ms | Allocations: 3240)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:17:01 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+
+SyntaxError - syntax error, unexpected ':', expecting ')'
+...confirmation,  :featured_image:{})
+...                              ^:
+  app/controllers/api/v1/users_controller.rb:63:in `'
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:17:50 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.42ms)
+Completed 200 OK in 31ms (Views: 12.6ms | ActiveRecord: 1.3ms | Allocations: 13499)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:18:02 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.28ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 997)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:18:14 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :featured_image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$bE9O8kigtN8qoXdcvtatROHo3DraJtqNrF9qfWq93P5Dic9zLObWy"], ["updated_at", "2020-10-21 13:18:14.413254"], ["id", 1]]
+  [1m[35m (60.7ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.24ms)
+Completed 200 OK in 144ms (Views: 0.7ms | ActiveRecord: 61.9ms | Allocations: 3407)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:22:41 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.3ms)
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:24:48 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.46ms)
+Completed 200 OK in 33ms (Views: 15.2ms | ActiveRecord: 1.1ms | Allocations: 15246)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:24:56 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :featured_image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "featured_image"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 1.1ms | Allocations: 12415)
+
+
+
+TypeError - can't cast ActiveStorage::Attached::One:
+  app/controllers/api/v1/users_controller.rb:43:in `update'
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:24:57 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :featured_image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "featured_image"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 0.6ms | Allocations: 2655)
+
+
+
+TypeError - can't cast ActiveStorage::Attached::One:
+  app/controllers/api/v1/users_controller.rb:43:in `update'
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:24:57 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :featured_image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "featured_image"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 0.7ms | Allocations: 2655)
+
+
+
+TypeError - can't cast ActiveStorage::Attached::One:
+  app/controllers/api/v1/users_controller.rb:43:in `update'
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:25:30 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.39ms)
+Completed 200 OK in 24ms (Views: 9.3ms | ActiveRecord: 1.0ms | Allocations: 15244)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:25:35 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :featured_image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$tu5N4UtQficA9u0rxlFi6.oH7Luj1UmuUE4L.QD5CHNpfBduFaLeO"], ["updated_at", "2020-10-21 13:25:35.468145"], ["id", 1]]
+  [1m[35m (61.9ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.33ms)
+Completed 200 OK in 144ms (Views: 0.9ms | ActiveRecord: 63.4ms | Allocations: 2978)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:29:47 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.31ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1016)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:29:50 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.31ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 1016)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:29:59 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>"{}"}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$S/ZDdjvZYt2tZUL6G9lz8OGjuQcDaKny.vlxKgdBaXEa7vYPnzdXO"], ["updated_at", "2020-10-21 13:29:59.412487"], ["id", 1]]
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "featured_image"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 2.7ms | Allocations: 15306)
+
+
+
+ActiveSupport::MessageVerifier::InvalidSignature - ActiveSupport::MessageVerifier::InvalidSignature:
+  app/controllers/api/v1/users_controller.rb:43:in `update'
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:29:59 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>"{}"}, "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$X754xdUGabkjBtcFDx6D2uio8KIfoaOQrz3HTAJjgHsIVr0QKkDKG"], ["updated_at", "2020-10-21 13:29:59.566822"], ["id", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "featured_image"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 1.1ms | Allocations: 3787)
+
+
+
+ActiveSupport::MessageVerifier::InvalidSignature - ActiveSupport::MessageVerifier::InvalidSignature:
+  app/controllers/api/v1/users_controller.rb:43:in `update'
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:29:59 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>"{}"}, "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$Sg/COWcaLGynG6mZKU4h1uLfDwBK55OLZKs6NezjdITbUbYt3VDT."], ["updated_at", "2020-10-21 13:29:59.664283"], ["id", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "featured_image"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 1.7ms | Allocations: 3905)
+
+
+
+ActiveSupport::MessageVerifier::InvalidSignature - ActiveSupport::MessageVerifier::InvalidSignature:
+  app/controllers/api/v1/users_controller.rb:43:in `update'
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:31:09 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.29ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:31:30 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.27ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:31:44 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>"\"Captura de tela de 2020-07-27 15-04-48.png\""}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$BwIaMs6NXsVD2aXdW9lH6ORGRy711ikSl2syaaQOmxjYL12Ye119."], ["updated_at", "2020-10-21 13:31:44.298924"], ["id", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "featured_image"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 1.1ms | Allocations: 3617)
+
+
+
+ActiveSupport::MessageVerifier::InvalidSignature - ActiveSupport::MessageVerifier::InvalidSignature:
+  app/controllers/api/v1/users_controller.rb:43:in `update'
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:31:44 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>"\"Captura de tela de 2020-07-27 15-04-48.png\""}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$a9hGdxa9/SIo6iyMDgKQpeYce0wjMVBhriYinBbTzt/iuiR8Sv/n2"], ["updated_at", "2020-10-21 13:31:44.397115"], ["id", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "featured_image"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 1.1ms | Allocations: 3443)
+
+
+
+ActiveSupport::MessageVerifier::InvalidSignature - ActiveSupport::MessageVerifier::InvalidSignature:
+  app/controllers/api/v1/users_controller.rb:43:in `update'
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:31:44 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>"\"Captura de tela de 2020-07-27 15-04-48.png\""}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$vPH7heUMLMtKbeyL8Tr/8eGsTR5mQeAH059atJTfQxwG8jbDJ4EF2"], ["updated_at", "2020-10-21 13:31:44.498580"], ["id", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "featured_image"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 1.1ms | Allocations: 2867)
+
+
+
+ActiveSupport::MessageVerifier::InvalidSignature - ActiveSupport::MessageVerifier::InvalidSignature:
+  app/controllers/api/v1/users_controller.rb:43:in `update'
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:32:29 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.48ms)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:32:35 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.31ms)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:32:39 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :featured_image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$krf4phLlQv61dpLtL7GFA.E3pqg9/9DJJF5Y8O8Mt7ofewVWJuv8u"], ["updated_at", "2020-10-21 13:32:39.540983"], ["id", 1]]
+  [1m[35m (71.2ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.32ms)
+Completed 200 OK in 152ms (Views: 1.1ms | ActiveRecord: 71.9ms | Allocations: 2480)
+
+
+Started GET "/admin" for ::1 at 2020-10-21 09:32:56 -0400
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_attachments"[0m
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" ORDER BY "active_storage_attachments"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_storage_blobs"[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" ORDER BY "active_storage_blobs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (Duration: 56.6ms | Allocations: 15408)
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/layouts/rails_admin/_head.html.haml (Duration: 2024.5ms | Allocations: 354222)
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (Duration: 3.3ms | Allocations: 2907)
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/layouts/rails_admin/_navigation.html.haml (Duration: 8.4ms | Allocations: 8055)
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (Duration: 3.5ms | Allocations: 3043)
+  Rendering /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/layouts/rails_admin/pjax.html.haml (Duration: 4.8ms | Allocations: 4501)
+Completed 200 OK in 2453ms (Views: 2154.1ms | ActiveRecord: 1.0ms | Allocations: 477048)
+
+
+Started GET "/assets/rails_admin/rails_admin-75eba59e4755012eec8ebb0065515c9f1b45f3d3d12e50bb94c58ed809100093.css" for ::1 at 2020-10-21 09:32:58 -0400
+Started GET "/assets/rails_admin/rails_admin-8d5e3c0e655216a30699d92136cdb2fe5386f4304a98e1e701d8b101005f7d74.js" for ::1 at 2020-10-21 09:32:58 -0400
+Started GET "/assets/rails_admin/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2" for ::1 at 2020-10-21 09:32:58 -0400
+Started GET "/admin/active_storage~attachment?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2020-10-21 09:33:00 -0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"active_storage~attachment"}
+  Rendering /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" ORDER BY active_storage_attachments.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 56.2ms | Allocations: 43822)
+Completed 200 OK in 68ms (Views: 60.2ms | ActiveRecord: 0.2ms | Allocations: 51344)
+
+
+Started GET "/sw.js" for ::1 at 2020-10-21 09:33:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/sw.js"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/active_storage~blob?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2020-10-21 09:33:01 -0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"active_storage~blob"}
+  Rendering /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" ORDER BY active_storage_blobs.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 9.3ms | Allocations: 5623)
+Completed 200 OK in 18ms (Views: 12.7ms | ActiveRecord: 0.3ms | Allocations: 9725)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2020-10-21 09:33:02 -0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  Rendering /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 21.0ms | Allocations: 11506)
+Completed 200 OK in 29ms (Views: 24.5ms | ActiveRecord: 0.2ms | Allocations: 15204)
+
+
+Started GET "/admin/user/12/edit?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2020-10-21 09:33:05 -0400
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/_form_field.html.haml (Duration: 8.7ms | Allocations: 1245)
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.3ms | Allocations: 153)
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.3ms | Allocations: 135)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 12], ["record_type", "User"], ["name", "featured_image"], ["LIMIT", 1]]
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/_form_file_upload.html.haml (Duration: 9.6ms | Allocations: 4722)
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/_submit_buttons.html.haml (Duration: 7.0ms | Allocations: 9488)
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (Duration: 72.0ms | Allocations: 21580)
+Completed 200 OK in 81ms (Views: 76.5ms | ActiveRecord: 0.5ms | Allocations: 25734)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2020-10-21 09:33:26 -0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  Rendering /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 18.4ms | Allocations: 10646)
+Completed 200 OK in 25ms (Views: 21.4ms | ActiveRecord: 0.2ms | Allocations: 13477)
+
+
+Started GET "/admin/user/1/edit?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2020-10-21 09:33:30 -0400
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.2ms | Allocations: 114)
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.2ms | Allocations: 151)
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.1ms | Allocations: 111)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "featured_image"], ["LIMIT", 1]]
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/_form_file_upload.html.haml (Duration: 1.3ms | Allocations: 584)
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/_submit_buttons.html.haml (Duration: 0.6ms | Allocations: 447)
+  Rendered /home/agenciaw3/.rvm/gems/ruby-2.5.0/gems/rails_admin-2.0.2/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (Duration: 7.5ms | Allocations: 4597)
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 0.3ms | Allocations: 8460)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:34:00 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.29ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 997)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:34:24 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.28ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:34:46 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.29ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:40:14 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :featured_image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$qjh5iVpa5oTnn.MqmFqhKeiI97AdkQPU3/nRdyKcimKYkx/3NSeb."], ["updated_at", "2020-10-21 13:40:14.427354"], ["id", 1]]
+  [1m[35m (83.4ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.25ms)
+Completed 200 OK in 165ms (Views: 1.4ms | ActiveRecord: 84.9ms | Allocations: 3225)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:42:13 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.34ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:42:26 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.37ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:43:03 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :featured_image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$PH9T/bvd0PBGkKAWmwZsmOoh.AY4orz/ouax526uJRT.hGsKL43Xm"], ["updated_at", "2020-10-21 13:43:03.726013"], ["id", 1]]
+  [1m[35m (77.5ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.34ms)
+Completed 200 OK in 162ms (Views: 0.9ms | ActiveRecord: 78.7ms | Allocations: 3229)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:44:07 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.29ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:44:25 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.31ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:44:38 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.29ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:45:57 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.3ms)
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:47:25 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.29ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:47:37 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>[]}, "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :featured_image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$8jGEABW8mVYJmM6Ixi1bPOjLvJFmobW4IgFSEbpsDqAsS55lefC2m"], ["updated_at", "2020-10-21 13:47:37.639423"], ["id", 1]]
+  [1m[35m (66.8ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.24ms)
+Completed 200 OK in 153ms (Views: 1.4ms | ActiveRecord: 68.4ms | Allocations: 3225)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:49:17 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.3ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:49:34 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :featured_image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$8gLAaRqUAdq.ADWkG1LskusRveL.8.o9BXxx0lKuJv7FNO4wB244m"], ["updated_at", "2020-10-21 13:49:35.019047"], ["id", 1]]
+  [1m[35m (59.2ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.34ms)
+Completed 200 OK in 141ms (Views: 1.0ms | ActiveRecord: 60.0ms | Allocations: 3228)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:52:02 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+
+SyntaxError - syntax error, unexpected ':', expecting ')'
+..._confirmation, :featured_image: [:id, :name, :email, :featur...
+...                              ^
+/home/agenciaw3/development/back-end-api/app/controllers/api/v1/users_controller.rb:63: syntax error, unexpected ')', expecting keyword_end
+...name, :email, :featured_image])
+...                              ^:
+  app/controllers/api/v1/users_controller.rb:63:in `'
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:52:34 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.37ms)
+Completed 200 OK in 24ms (Views: 10.2ms | ActiveRecord: 1.0ms | Allocations: 13552)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:52:50 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.4ms)
+Completed 200 OK in 26ms (Views: 9.5ms | ActiveRecord: 1.0ms | Allocations: 15244)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:53:01 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$3ONCHphHDidgCV9Djg5xneGkab9vnlWd1bFkNzCftlB0WsVM2ZWAG"], ["updated_at", "2020-10-21 13:53:01.442110"], ["id", 1]]
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "featured_image"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 2.4ms | Allocations: 16530)
+
+
+
+ArgumentError - missing keywords: io, filename:
+  app/controllers/api/v1/users_controller.rb:43:in `update'
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:53:01 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$59KidOgZuhXi4g/f4hJb8uMhtJ27a2hEQPm3gfYKiR.TGJW4xcg1u"], ["updated_at", "2020-10-21 13:53:01.562422"], ["id", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "featured_image"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 0.9ms | Allocations: 2707)
+
+
+
+ArgumentError - missing keywords: io, filename:
+  app/controllers/api/v1/users_controller.rb:43:in `update'
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:53:01 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$wQvXFod3dC2Dwyke6diYX.e5XJ8G51/Dzecbp.c/3WxvYahr1h/U."], ["updated_at", "2020-10-21 13:53:01.660165"], ["id", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "featured_image"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 1.4ms | Allocations: 3649)
+
+
+
+ArgumentError - missing keywords: io, filename:
+  app/controllers/api/v1/users_controller.rb:43:in `update'
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:58:21 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.42ms)
+Completed 200 OK in 32ms (Views: 18.9ms | ActiveRecord: 1.0ms | Allocations: 13508)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:58:34 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.42ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1016)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 09:58:41 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :featured_image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$GlNbP3zzOqcPreuwZ9/SUO2.JdtxDSNo46vpsY/3p2OLDTtbTRb.a"], ["updated_at", "2020-10-21 13:58:41.421501"], ["id", 1]]
+  [1m[35m (76.8ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.3ms)
+Completed 200 OK in 158ms (Views: 0.9ms | ActiveRecord: 78.1ms | Allocations: 2712)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:59:10 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+
+SyntaxError - syntax error, unexpected ':', expecting ')'
+..._confirmation, :featured_image: [])
+...                              ^:
+  app/controllers/api/v1/users_controller.rb:63:in `'
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 09:59:30 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.37ms)
+Completed 200 OK in 29ms (Views: 13.4ms | ActiveRecord: 1.1ms | Allocations: 13517)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:04:17 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.35ms)
+Completed 200 OK in 25ms (Views: 8.6ms | ActiveRecord: 1.7ms | Allocations: 13497)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:09:01 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.35ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 997)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:09:14 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :featured_image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$7s23YnEiBO3BBdA3nvZW4OM0MUZu9jXBDjjhQ2vIUMiSquurb9PeW"], ["updated_at", "2020-10-21 14:09:14.983653"], ["id", 1]]
+  [1m[35m (111.1ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.25ms)
+Completed 200 OK in 192ms (Views: 0.8ms | ActiveRecord: 112.4ms | Allocations: 3515)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:10:08 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.3ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:10:10 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.32ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:10:20 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryJKNTUhlMeBAlF505
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundaryJKNTUhlMeBAlF505
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundaryJKNTUhlMeBAlF505
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundaryJKNTUhlMeBAlF505
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundaryJKNTUhlMeBAlF505--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundaryJKNTUhlMeBAlF505
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundaryJKNTUhlMeBAlF505
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundaryJKNTUhlMeBAlF505
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundaryJKNTUhlMeBAlF505
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundaryJKNTUhlMeBAlF505--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:10:20 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundary0YcdxIAWMtAVVjZG
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundary0YcdxIAWMtAVVjZG
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundary0YcdxIAWMtAVVjZG
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundary0YcdxIAWMtAVVjZG
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundary0YcdxIAWMtAVVjZG--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundary0YcdxIAWMtAVVjZG
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundary0YcdxIAWMtAVVjZG
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundary0YcdxIAWMtAVVjZG
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundary0YcdxIAWMtAVVjZG
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundary0YcdxIAWMtAVVjZG--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:10:20 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryCrSWSMszmkLeW1WQ
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundaryCrSWSMszmkLeW1WQ
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundaryCrSWSMszmkLeW1WQ
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundaryCrSWSMszmkLeW1WQ
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundaryCrSWSMszmkLeW1WQ--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundaryCrSWSMszmkLeW1WQ
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundaryCrSWSMszmkLeW1WQ
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundaryCrSWSMszmkLeW1WQ
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundaryCrSWSMszmkLeW1WQ
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundaryCrSWSMszmkLeW1WQ--
+':
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:10:43 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.27ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:10:48 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryaRBr2rDXlZMWJhIw
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundaryaRBr2rDXlZMWJhIw
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundaryaRBr2rDXlZMWJhIw
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundaryaRBr2rDXlZMWJhIw
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundaryaRBr2rDXlZMWJhIw--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundaryaRBr2rDXlZMWJhIw
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundaryaRBr2rDXlZMWJhIw
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundaryaRBr2rDXlZMWJhIw
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundaryaRBr2rDXlZMWJhIw
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundaryaRBr2rDXlZMWJhIw--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:10:48 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundarypoojrNz9MoqlPV96
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundarypoojrNz9MoqlPV96
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundarypoojrNz9MoqlPV96
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundarypoojrNz9MoqlPV96
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundarypoojrNz9MoqlPV96--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundarypoojrNz9MoqlPV96
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundarypoojrNz9MoqlPV96
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundarypoojrNz9MoqlPV96
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundarypoojrNz9MoqlPV96
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundarypoojrNz9MoqlPV96--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:10:48 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryNhWhxg6hKbBei0SK
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundaryNhWhxg6hKbBei0SK
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundaryNhWhxg6hKbBei0SK
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundaryNhWhxg6hKbBei0SK
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundaryNhWhxg6hKbBei0SK--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundaryNhWhxg6hKbBei0SK
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundaryNhWhxg6hKbBei0SK
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundaryNhWhxg6hKbBei0SK
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundaryNhWhxg6hKbBei0SK
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundaryNhWhxg6hKbBei0SK--
+':
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:10:52 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.26ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:11:11 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.55ms)
+Completed 200 OK in 23ms (Views: 9.3ms | ActiveRecord: 0.9ms | Allocations: 15244)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:11:17 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryvoWbxBlm6yuBQuog
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundaryvoWbxBlm6yuBQuog
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundaryvoWbxBlm6yuBQuog
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundaryvoWbxBlm6yuBQuog
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundaryvoWbxBlm6yuBQuog--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundaryvoWbxBlm6yuBQuog
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundaryvoWbxBlm6yuBQuog
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundaryvoWbxBlm6yuBQuog
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundaryvoWbxBlm6yuBQuog
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundaryvoWbxBlm6yuBQuog--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:11:17 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundary75HXDKntEK7PrhiG
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundary75HXDKntEK7PrhiG
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundary75HXDKntEK7PrhiG
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundary75HXDKntEK7PrhiG
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundary75HXDKntEK7PrhiG--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundary75HXDKntEK7PrhiG
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundary75HXDKntEK7PrhiG
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundary75HXDKntEK7PrhiG
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundary75HXDKntEK7PrhiG
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundary75HXDKntEK7PrhiG--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:11:17 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryydXBAFScrA1dvNHW
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundaryydXBAFScrA1dvNHW
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundaryydXBAFScrA1dvNHW
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundaryydXBAFScrA1dvNHW
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundaryydXBAFScrA1dvNHW--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundaryydXBAFScrA1dvNHW
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundaryydXBAFScrA1dvNHW
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundaryydXBAFScrA1dvNHW
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundaryydXBAFScrA1dvNHW
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundaryydXBAFScrA1dvNHW--
+':
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:11:40 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.33ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 1016)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:12:25 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (1.42ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1016)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:12:32 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.28ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:12:36 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.2ms | Allocations: 770)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/v1/users_controller.rb:63:in `user_params'
+  app/controllers/api/v1/users_controller.rb:43:in `update'
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:12:36 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.2ms | Allocations: 745)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/v1/users_controller.rb:63:in `user_params'
+  app/controllers/api/v1/users_controller.rb:43:in `update'
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:12:36 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.2ms | Allocations: 745)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/v1/users_controller.rb:63:in `user_params'
+  app/controllers/api/v1/users_controller.rb:43:in `update'
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:13:07 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.92ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:15:04 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.36ms)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:15:16 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.31ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 997)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:15:22 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :featured_image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$kjYalvAJK6tEShBfUUlpoOYiztMwzIgD1TMiQ6OQJDoi1GEc4jcWK"], ["updated_at", "2020-10-21 14:15:22.740240"], ["id", 1]]
+  [1m[35m (67.8ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.23ms)
+Completed 200 OK in 150ms (Views: 0.7ms | ActiveRecord: 68.8ms | Allocations: 3734)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:16:27 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.25ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:16:31 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundarynSlfJ9spQ9gw5uSC
+Content-Disposition: form-data; name="User"
+
+[object Object]
+------WebKitFormBoundarynSlfJ9spQ9gw5uSC--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundarynSlfJ9spQ9gw5uSC
+Content-Disposition: form-data; name="User"
+[object Object]
+------WebKitFormBoundarynSlfJ9spQ9gw5uSC--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:16:31 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundarys7BlyprhgbDjN51q
+Content-Disposition: form-data; name="User"
+
+[object Object]
+------WebKitFormBoundarys7BlyprhgbDjN51q--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundarys7BlyprhgbDjN51q
+Content-Disposition: form-data; name="User"
+[object Object]
+------WebKitFormBoundarys7BlyprhgbDjN51q--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:16:31 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryWJr0fyogV8V0QXGF
+Content-Disposition: form-data; name="User"
+
+[object Object]
+------WebKitFormBoundaryWJr0fyogV8V0QXGF--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundaryWJr0fyogV8V0QXGF
+Content-Disposition: form-data; name="User"
+[object Object]
+------WebKitFormBoundaryWJr0fyogV8V0QXGF--
+':
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:17:01 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.3ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:19:09 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.3ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:19:52 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.35ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 997)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:20:01 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundarys3HQmd1CJd8ufBoo
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundarys3HQmd1CJd8ufBoo
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundarys3HQmd1CJd8ufBoo
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundarys3HQmd1CJd8ufBoo
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundarys3HQmd1CJd8ufBoo--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundarys3HQmd1CJd8ufBoo
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundarys3HQmd1CJd8ufBoo
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundarys3HQmd1CJd8ufBoo
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundarys3HQmd1CJd8ufBoo
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundarys3HQmd1CJd8ufBoo--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:20:01 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryiUPBEsohvtNTpDWg
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundaryiUPBEsohvtNTpDWg
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundaryiUPBEsohvtNTpDWg
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundaryiUPBEsohvtNTpDWg
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundaryiUPBEsohvtNTpDWg--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundaryiUPBEsohvtNTpDWg
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundaryiUPBEsohvtNTpDWg
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundaryiUPBEsohvtNTpDWg
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundaryiUPBEsohvtNTpDWg
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundaryiUPBEsohvtNTpDWg--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:20:01 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundarykMMlFxUrLh9Gldvb
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundarykMMlFxUrLh9Gldvb
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundarykMMlFxUrLh9Gldvb
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundarykMMlFxUrLh9Gldvb
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundarykMMlFxUrLh9Gldvb--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundarykMMlFxUrLh9Gldvb
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundarykMMlFxUrLh9Gldvb
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundarykMMlFxUrLh9Gldvb
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundarykMMlFxUrLh9Gldvb
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundarykMMlFxUrLh9Gldvb--
+':
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:23:29 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.29ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:27:09 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.28ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:27:37 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.32ms)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:27:42 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryk0KUrxQQ2oVNso21
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundaryk0KUrxQQ2oVNso21
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundaryk0KUrxQQ2oVNso21
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundaryk0KUrxQQ2oVNso21
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundaryk0KUrxQQ2oVNso21--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundaryk0KUrxQQ2oVNso21
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundaryk0KUrxQQ2oVNso21
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundaryk0KUrxQQ2oVNso21
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundaryk0KUrxQQ2oVNso21
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundaryk0KUrxQQ2oVNso21--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:27:42 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryIpcfZGHecsdg3NJE
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundaryIpcfZGHecsdg3NJE
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundaryIpcfZGHecsdg3NJE
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundaryIpcfZGHecsdg3NJE
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundaryIpcfZGHecsdg3NJE--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundaryIpcfZGHecsdg3NJE
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundaryIpcfZGHecsdg3NJE
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundaryIpcfZGHecsdg3NJE
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundaryIpcfZGHecsdg3NJE
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundaryIpcfZGHecsdg3NJE--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:27:42 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundary8HFiKQemI7fsBIFA
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundary8HFiKQemI7fsBIFA
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundary8HFiKQemI7fsBIFA
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundary8HFiKQemI7fsBIFA
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundary8HFiKQemI7fsBIFA--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundary8HFiKQemI7fsBIFA
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundary8HFiKQemI7fsBIFA
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundary8HFiKQemI7fsBIFA
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundary8HFiKQemI7fsBIFA
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundary8HFiKQemI7fsBIFA--
+':
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:31:38 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.28ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:31:46 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.3ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:31:50 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>nil}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$8EVIrshBBM629FRtd7oV0uIn0gWkOlkAxzH6HHC/rz5P5KAVJb.Zq"], ["updated_at", "2020-10-21 14:31:50.766941"], ["id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "featured_image"], ["LIMIT", 1]]
+  [1m[35m (80.9ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.38ms)
+Completed 200 OK in 212ms (Views: 1.0ms | ActiveRecord: 82.8ms | Allocations: 8450)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:32:01 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.27ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:32:06 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>nil}, "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$Rz2fKqDYPf7J1rnTAA/BVOCBiRQoK7ykui9uF.MUInd3k03BDv2eK"], ["updated_at", "2020-10-21 14:32:06.849447"], ["id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "featured_image"], ["LIMIT", 1]]
+  [1m[35m (138.6ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.27ms)
+Completed 200 OK in 221ms (Views: 0.8ms | ActiveRecord: 139.5ms | Allocations: 3761)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:32:14 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.35ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:32:21 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>nil}, "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$hAli4MzSCw6Q81sGDqfBbOafERn68.djbZvVm63NQ0Y9Ue8uZpIEe"], ["updated_at", "2020-10-21 14:32:21.650021"], ["id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "featured_image"], ["LIMIT", 1]]
+  [1m[35m (75.8ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.34ms)
+Completed 200 OK in 160ms (Views: 0.9ms | ActiveRecord: 76.6ms | Allocations: 3586)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:32:30 -0400
+Processing by Api::V1::UsersController#update as HTML
+  Parameters: {"user"=>{"name"=>"test", "email"=>"test@test.ca", "password"=>"[FILTERED]", "featured_image"=>{}}, "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :featured_image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "test"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "test@test.ca"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["password_digest", "$2a$10$DIQ9vq93qL24FqYD3tPXsucdnswWDcQFs4G2R1YB9zB3UDjwMJYpW"], ["updated_at", "2020-10-21 14:32:31.066652"], ["id", 1]]
+  [1m[35m (71.3ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.32ms)
+Completed 200 OK in 157ms (Views: 0.9ms | ActiveRecord: 72.1ms | Allocations: 3232)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:34:50 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.28ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:35:00 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryhS7wHNyB0TtcQ3mX
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundaryhS7wHNyB0TtcQ3mX
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundaryhS7wHNyB0TtcQ3mX
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundaryhS7wHNyB0TtcQ3mX
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundaryhS7wHNyB0TtcQ3mX--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundaryhS7wHNyB0TtcQ3mX
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundaryhS7wHNyB0TtcQ3mX
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundaryhS7wHNyB0TtcQ3mX
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundaryhS7wHNyB0TtcQ3mX
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundaryhS7wHNyB0TtcQ3mX--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:35:00 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundary1xfux0iPk1ODQpMg
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundary1xfux0iPk1ODQpMg
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundary1xfux0iPk1ODQpMg
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundary1xfux0iPk1ODQpMg
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundary1xfux0iPk1ODQpMg--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundary1xfux0iPk1ODQpMg
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundary1xfux0iPk1ODQpMg
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundary1xfux0iPk1ODQpMg
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundary1xfux0iPk1ODQpMg
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundary1xfux0iPk1ODQpMg--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:35:00 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryxhgCnpUqjb0ZFk5L
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundaryxhgCnpUqjb0ZFk5L
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundaryxhgCnpUqjb0ZFk5L
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundaryxhgCnpUqjb0ZFk5L
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundaryxhgCnpUqjb0ZFk5L--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundaryxhgCnpUqjb0ZFk5L
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundaryxhgCnpUqjb0ZFk5L
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundaryxhgCnpUqjb0ZFk5L
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundaryxhgCnpUqjb0ZFk5L
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundaryxhgCnpUqjb0ZFk5L--
+':
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:35:21 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.33ms)
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:35:51 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.32ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:35:57 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.32ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:36:05 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+function append() { [native code] }
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at 'function append() { [native code] }':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:36:05 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+function append() { [native code] }
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at 'function append() { [native code] }':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:36:05 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+function append() { [native code] }
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at 'function append() { [native code] }':
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:36:35 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.3ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:36:42 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.29ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:36:52 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundarykV9gkVRMmUTso0tx
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundarykV9gkVRMmUTso0tx
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundarykV9gkVRMmUTso0tx
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundarykV9gkVRMmUTso0tx
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundarykV9gkVRMmUTso0tx--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundarykV9gkVRMmUTso0tx
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundarykV9gkVRMmUTso0tx
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundarykV9gkVRMmUTso0tx
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundarykV9gkVRMmUTso0tx
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundarykV9gkVRMmUTso0tx--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:36:52 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryk8JT3n9SmHSACs7i
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundaryk8JT3n9SmHSACs7i
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundaryk8JT3n9SmHSACs7i
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundaryk8JT3n9SmHSACs7i
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundaryk8JT3n9SmHSACs7i--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundaryk8JT3n9SmHSACs7i
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundaryk8JT3n9SmHSACs7i
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundaryk8JT3n9SmHSACs7i
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundaryk8JT3n9SmHSACs7i
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundaryk8JT3n9SmHSACs7i--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:36:52 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryUtQ1N14lAXkN12lb
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundaryUtQ1N14lAXkN12lb
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundaryUtQ1N14lAXkN12lb
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundaryUtQ1N14lAXkN12lb
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundaryUtQ1N14lAXkN12lb--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundaryUtQ1N14lAXkN12lb
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundaryUtQ1N14lAXkN12lb
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundaryUtQ1N14lAXkN12lb
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundaryUtQ1N14lAXkN12lb
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundaryUtQ1N14lAXkN12lb--
+':
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:37:50 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.28ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2020-10-21 10:38:00 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.31ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 996)
+
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:38:08 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryPck5y1Z9nSt8c2pX
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundaryPck5y1Z9nSt8c2pX
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundaryPck5y1Z9nSt8c2pX
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundaryPck5y1Z9nSt8c2pX
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundaryPck5y1Z9nSt8c2pX--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundaryPck5y1Z9nSt8c2pX
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundaryPck5y1Z9nSt8c2pX
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundaryPck5y1Z9nSt8c2pX
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundaryPck5y1Z9nSt8c2pX
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundaryPck5y1Z9nSt8c2pX--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:38:08 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryBjAZkH5ISlKSc85h
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundaryBjAZkH5ISlKSc85h
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundaryBjAZkH5ISlKSc85h
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundaryBjAZkH5ISlKSc85h
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundaryBjAZkH5ISlKSc85h--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundaryBjAZkH5ISlKSc85h
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundaryBjAZkH5ISlKSc85h
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundaryBjAZkH5ISlKSc85h
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundaryBjAZkH5ISlKSc85h
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundaryBjAZkH5ISlKSc85h--
+':
+
+Started PUT "/api/v1/users/1" for ::1 at 2020-10-21 10:38:08 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+------WebKitFormBoundaryAAfTr06I07igTeWe
+Content-Disposition: form-data; name="name"
+
+undefined
+------WebKitFormBoundaryAAfTr06I07igTeWe
+Content-Disposition: form-data; name="email"
+
+undefined
+------WebKitFormBoundaryAAfTr06I07igTeWe
+Content-Disposition: form-data; name="password"
+
+undefined
+------WebKitFormBoundaryAAfTr06I07igTeWe
+Content-Disposition: form-data; name="Featured_image"
+
+undefined
+------WebKitFormBoundaryAAfTr06I07igTeWe--
+
+
+ActionDispatch::Http::Parameters::ParseError - 765: unexpected token at '------WebKitFormBoundaryAAfTr06I07igTeWe
+Content-Disposition: form-data; name="name"
+undefined
+------WebKitFormBoundaryAAfTr06I07igTeWe
+Content-Disposition: form-data; name="email"
+undefined
+------WebKitFormBoundaryAAfTr06I07igTeWe
+Content-Disposition: form-data; name="password"
+undefined
+------WebKitFormBoundaryAAfTr06I07igTeWe
+Content-Disposition: form-data; name="Featured_image"
+undefined
+------WebKitFormBoundaryAAfTr06I07igTeWe--
+':
+
