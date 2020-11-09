@@ -6,7 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 gem 'jwt'
-
+gem 'carrierwave'
+gem 'carrierwave-base64'
 gem 'bcrypt'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2.1'
