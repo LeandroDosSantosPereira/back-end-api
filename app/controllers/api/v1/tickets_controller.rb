@@ -5,11 +5,12 @@ class Api::V1::TicketsController < ApplicationController
     # GET /users
     def index
       @tickets = Ticket.all
+      # ticket.created_at.strftime('%d/%m/%Y - %T ')
       render json: @tickets
     end
   
     # GET /users/1
-    def show
+    def show     
       render json: @tickets
     end
   
