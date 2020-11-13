@@ -1,4 +1,4 @@
 class Ticket < ApplicationRecord
-  validates :title, :user, presence: true
+  validates :title, :user, :ads_id, presence: true
   belongs_to :user
 end
