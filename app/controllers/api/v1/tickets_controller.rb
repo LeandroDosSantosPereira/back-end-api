@@ -1,7 +1,6 @@
 class Api::V1::TicketsController < ApplicationController
     # before_action :authenticate_request!, except: [:create, :login] # Exclude this route from authentication
-    # before_action :set_user, only: [:show, :update, :destroy]  
-  
+    before_action :authenticate_request!
     # GET /users
     def index
       @tickets = Ticket.all
@@ -46,7 +45,8 @@ class Api::V1::TicketsController < ApplicationController
       end
 
       def ticket_params
-        params.permit(:title, :user_id, :ads_id)
+        params.require(:ticket).permit(:title, :user_id, :ads_id)
+        # params.permit(:title, :user_id, :ads_id)
       end
   
 end
