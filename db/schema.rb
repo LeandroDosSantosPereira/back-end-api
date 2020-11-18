@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_12_135556) do
+ActiveRecord::Schema.define(version: 2020_11_17_214637) do
 
   create_table "tickets", force: :cascade do |t|
     t.string "title"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_11_12_135556) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.string "photo"
+    t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
