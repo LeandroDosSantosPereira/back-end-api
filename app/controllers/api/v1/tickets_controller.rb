@@ -8,8 +8,9 @@ class Api::V1::TicketsController < ApplicationController
     end
   
     # GET /users/1
-    def show     
-      render json: @tickets
+    def show  
+      @ticket = Ticket.find(params[:id])
+      render json: @ticket
     end
   
     # POST /users
