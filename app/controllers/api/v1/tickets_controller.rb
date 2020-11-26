@@ -46,7 +46,7 @@ class Api::V1::TicketsController < ApplicationController
       end
 
       def ticket_params
-        params.require(:ticket).permit(:title, :user_id, :ads_id, :image)
+        params.require(:ticket).permit(:title, :user_id, :ads_id, :image, :text)
         # params.permit(:title, :user_id, :ads_id)
       end
   
