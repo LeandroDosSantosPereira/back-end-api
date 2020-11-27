@@ -7,6 +7,7 @@ Rails.application.routes.draw do
      post 'users/login'
      post 'users/create'
      resources :tickets
+     resources :comments
     end
   end
 end
