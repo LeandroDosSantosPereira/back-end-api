@@ -3,7 +3,7 @@ class Api::V1::CommentsController < ApplicationController
     before_action :authenticate_request!
     # GET /users
     def index
-      @comments = Comment.all
+      @comments = Comment.all.order(id: :desc)
       render json: @comments
     end
   
