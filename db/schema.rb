@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_02_122927) do
+ActiveRecord::Schema.define(version: 2020_12_10_175532) do
 
   create_table "comments", force: :cascade do |t|
     t.string "text"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2020_12_02_122927) do
     t.integer "ads_id"
     t.string "image"
     t.string "text"
+    t.boolean "approval"
     t.index ["user_id"], name: "index_tickets_on_user_id"
   end
 
