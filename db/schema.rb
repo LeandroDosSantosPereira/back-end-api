@@ -12,20 +12,23 @@
 
 ActiveRecord::Schema.define(version: 2020_12_10_175532) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "comments", force: :cascade do |t|
     t.string "text"
-    t.integer "ticket_id", null: false
+    t.bigint "ticket_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["ticket_id"], name: "index_comments_on_ticket_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "tickets", force: :cascade do |t|
     t.string "title"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "ads_id"
