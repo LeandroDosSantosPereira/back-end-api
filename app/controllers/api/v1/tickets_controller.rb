@@ -1,6 +1,8 @@
 class Api::V1::TicketsController < ApplicationController
     # before_action :authenticate_request!, except: [:create, :login] # Exclude this route from authentication
     before_action :authenticate_request!
+    before_action :set_ticket, only: [:show, :update, :destroy]
+
     # GET /users
     def index
       @tickets = Ticket.all
