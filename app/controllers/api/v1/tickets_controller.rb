@@ -18,8 +18,17 @@ class Api::V1::TicketsController < ApplicationController
     # POST /users
     def create
       @ticket = Ticket.new(ticket_params)
-      puts @ticket
-      if @ticket.save
+      
+      # Verifica para qual usuário deve ser enviado o e-mail
+      @users = User.all
+      @users.each do |user| 
+       if user.id == @ticket.ads_id
+        @email_to = user.email
+       end
+      end 
+      
+      if @ticket.save        
+        TicketCreatedMailer.open_call(@ticket,  @email_to).deliver
         # render json: @user, status: :created, location: @user
         render json: @ticket
       else

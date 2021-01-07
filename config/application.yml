@@ -1,0 +1,22 @@
+# Configuration all env mail
+SMTP_ADDRESS: "smtp.emailemnuvem.com.br"
+SMTP_PORT: "587"
+SMTP_DOMAIN: "agenciaw3.digital"
+SMTP_USER_NAME: "no-replay@agenciaw3.digital"
+SMTP_PASSWORD: "Usuario@2019"
+ 
+# From email
+SMTP_FROM_MAIL: "leandro@agenciaw3.digital"
+ 
+# Paths and URls
+UPLOAD_HOST: "http://cdn1.localtest.me:3000/"
+SFTP_FOLDER: ""
+SFTP_HOST: ""
+SFTP_USER: ""
+SFTP_PASSWORD: ""
+ 
+RACK_MULTIPART_PART_LIMIT: "0"
+RACK_MULTIPART_LIMIT: "0"
+ 
+RECAPTCHA_SITE_KEY: "6LcxfKkZAAAAAPsK6apy8gf8Vu3V2ETpkYA4fVWQ"
+RECAPTCHA_SECRET_KEY: "6LcxfKkZAAAAAMRDgY0SGnR-3T3hBd6Kmn6A7zWi"

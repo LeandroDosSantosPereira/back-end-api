@@ -13,6 +13,11 @@ gem 'bcrypt'
 gem 'rails', '~> 6.0.2.1'
 
 gem 'pg'
+
+gem 'rails-env'
+
+gem 'figaro'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 #Gem serializer
