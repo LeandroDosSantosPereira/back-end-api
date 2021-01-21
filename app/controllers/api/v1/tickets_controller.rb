@@ -28,7 +28,7 @@ class Api::V1::TicketsController < ApplicationController
       end 
       
       if @ticket.save        
-        # TicketCreatedMailer.open_call(@ticket,  @email_to).deliver
+        TicketCreatedMailer.open_call(@ticket,  @email_to).deliver
         # render json: @user, status: :created, location: @user
         render json: @ticket
       else
