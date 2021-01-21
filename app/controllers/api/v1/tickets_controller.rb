@@ -38,7 +38,16 @@ class Api::V1::TicketsController < ApplicationController
   
     # PATCH/PUT /users/1
     def update
+      # Verifica para qual usuário deve ser enviado o e-mail
+      @users = User.all
+      @users.each do |user| 
+        if user.id == @ticket.ads_id
+        @user = user
+        end
+      end 
+
       if @ticket.update(ticket_params)
+        ApprovedMailer.like_unlike(@ticket,  @user).deliver
         render json: @ticket
       else
         render json: @ticket.errors, status: :unprocessable_entity
