@@ -16,9 +16,26 @@ class Api::V1::CommentsController < ApplicationController
     # POST /users
     def create
       @comment = Comment.new(comment_params)
-      puts @comment
+
+      @ticket = Ticket.find(@comment.ticket_id)
+
+      @user = User.all
+     
+
+
       if @comment.save
+
+        if @comment.user_id == @ticket.user_id
+           #"Para quem recebeu !!!!!!!!!!"
+          @user_env = @user.find(@ticket.ads_id)
+          @user_from = @user.find(@ticket.user_id)           
+          else
+          #"Para quem criou !!!!!!!!!!" 
+          @user_env = @user.find(@ticket.user_id)
+          @user_from = @user.find(@ticket.ads_id)
+          end
         # render json: @user, status: :created, location: @user
+        CommentCreatedMailer.comment_send(@comment,  @user_env, @user_from).deliver
         render json: @comment
       else
         render json: @comment.errors, status: :unprocessable_entity
